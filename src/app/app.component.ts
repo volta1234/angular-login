@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Volta';
+  constructor(public authService: AuthService) { }
+
+  logout() {
+    this.authService.logout();
+  }
 }
