@@ -3,6 +3,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
 import { HomeComponent } from './home/home.component';
 import { UserTableComponent } from './user-table/user-table.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 const routeConfig: Routes = [
     {
@@ -24,6 +25,11 @@ const routeConfig: Routes = [
         path: 'user-table',
         component: UserTableComponent,
         title: 'Users List'
+    },
+    {
+        path: 'reset-password',
+        component: ResetPasswordComponent,
+        title: 'Reset Password'
     }
 ];
 
