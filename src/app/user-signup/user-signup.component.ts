@@ -1,12 +1,28 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-user-signup',
-  standalone: true,
-  imports: [],
+  selector: 'app-signup',
   templateUrl: './user-signup.component.html',
-  styleUrl: './user-signup.component.css'
+  styleUrls: ['./user-signup.component.css']
 })
 export class UserSignupComponent {
+  username: string = "";
+  email: string = "";
+  password: string = "";
 
+  signup() {
+    const user = {
+      username: this.username,
+      email: this.email,
+      password: this.password
+    };
+
+    localStorage.setItem('currentUser', JSON.stringify(user));
+
+    this.username = '';
+    this.email = '';
+    this.password = '';
+    alert('User registered successfully!');
+  }
 }

@@ -123,8 +123,15 @@
         #login-link {
           border-radius: 20px;
           padding: 10px 20px;
-          color: #FFF;
-          background-color: #847ef8;
+          color: #3d3737;
+          background-color: #dfdfeb;
+        }
+
+        #logout {
+          border-radius: 20px;
+          padding: 10px 20px;
+          color: #3d3737;
+          background-color: #dfdfeb;
         }
 
         .landing-page header .links li:not(:last-child):hover {
@@ -189,10 +196,10 @@
           <div class="container">
             <a href="#" class="logo">volta <b>Dynamic</b></a>
             <ul class="links">
-              <li *ngIf="!authService.isLoggedIn()" routerLink="/signup">Get Started</li>
-              <li *ngIf="!authService.isLoggedIn()" id="login-link" routerLink="/login">Login</li>
+              <li  id="login-link" routerLink="/login">Login</li>
               <li *ngIf="authService.isLoggedIn()" routerLink="/user-table">Users</li>
-              <li *ngIf="authService.isLoggedIn()" (click)="authService.logout()">Logout</li>
+              <li id="logout" *ngIf="authService.isLoggedIn()" (click)="authService.logout()">Logout</li>
+              <li  routerLink="/signup">Get Started</li>
             </ul>
           </div>
         </header>
