@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { UserLoginComponent } from './user-login/user-login.component';
-import { UserSignupComponent } from './user-signup/user-signup.component';
-import { HomeComponent } from './home/home.component';
-import { UserTableComponent } from './user-table/user-table.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
-import { AuthGuard } from './auth.guard';
+import { UserLoginComponent } from './pages/user-login/user-login.component';
+import { UserSignupComponent } from './pages/user-signup/user-signup.component';
+import { HomeComponent } from './pages/home/home.component';
+import { UserTableComponent } from './pages/user-table/user-table.component';
+import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routeConfig: Routes = [
     {
