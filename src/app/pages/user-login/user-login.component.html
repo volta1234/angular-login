@@ -1,13 +1,13 @@
-<form method="post" action="">
+<form  [formGroup]="loginForm" (ngSubmit)="handleFormSubmit($event)">
 
     <h3 id="logo">Log In</h3>
 
     <label for="username">Username</label>
-    <input type="text" id="username" name="username" class="form-control" placeholder="Type in your username.." autocomplete="off"
+    <input type="text" formControlName="username" class="form-control" placeholder="Type in your username.." autocomplete="off"
         required />
 
     <label for="password">Password</label>
-    <input type="password" id="password" name="password" placeholder="Enter your password.." autocomplete="off"
+    <input type="password" formControlName="password" placeholder="Enter your password.." autocomplete="off"
         required />
 
     <a class="forgot" href="/reset-password">Forgot Password?</a>
