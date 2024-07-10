@@ -15,14 +15,15 @@ export class UserSignupComponent {
     let users = JSON.parse(localStorage.getItem('users') || '[]');
 
     if (users.some((user: any) => user.email === this.userSignup.email)) {
-      alert('This email is already registered.');
+      alert('This email is already registered. please Login to continue.');
       return;
     }
 
     users.push(this.userSignup);
     localStorage.setItem('users', JSON.stringify(users));
 
-    alert('Registration successful!');
+    alert('Welcome to volta Dynamics, proceed to Login.');
+    console.log(this.userSignup)
   }
 }
 

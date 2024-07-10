@@ -1,9 +1,9 @@
-<form method="post" action="">
+<form (ngSubmit)="onSubmit()" method="post" action="">
 
     <h3 id="logo">Log In</h3>
 
-    <label for="username">Username</label>
-    <input type="text" id="username" name="username" placeholder="Type in your username.." autocomplete="off"
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Type in your email.." autocomplete="off"
         required />
 
     <label for="password">Password</label>

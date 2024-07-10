@@ -4,12 +4,13 @@ import { RouterModule } from '@angular/router';
 import { AuthService } from './services/auth.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
 
-  imports: [FormsModule, RouterOutlet, RouterModule, AppComponent, ReactiveFormsModule],
+  imports: [FormsModule, RouterOutlet, RouterModule, AppComponent, CommonModule, ReactiveFormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
