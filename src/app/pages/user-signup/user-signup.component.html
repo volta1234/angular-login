@@ -1,12 +1,12 @@
 <h1 id="logo">Register Here</h1>
-<form id="signupForm">
-    <h1 id="redirect">Have an account? <a href="/login">Login</a></h1>
+<form (ngSubmit)="onSubmit()" id="signupForm">
+    <h1 id="redirect">Have an account? <a id="redirect-login" href="/login">Login</a></h1>
     <div class="clearfix">
         <div class="col-25">
             <label for="fname">First Name</label>
         </div>
         <div class="col-75">
-            <input ngModel id="fname" type="text" name="fname" placeholder="First Name" required>
+            <input ngModel id="fname" [(ngModel)]="userSignup.firstName" type="text" name="firstName" placeholder="First Name" required>
         </div>
     </div>
 
@@ -15,7 +15,7 @@
             <label for="lname">Last Name</label>
         </div>
         <div class="col-75">
-            <input id="lname" type="text" name="lname" placeholder="Last Name" required>
+            <input id="lname" [(ngModel)]="userSignup.lastName" type="text" name="lastName" placeholder="Last Name" required>
         </div>
     </div>
 
@@ -24,7 +24,7 @@
             <label for="email">Email</label>
         </div>
         <div class="col-75">
-            <input id="email" type="email" name="email" placeholder="Email" required>
+            <input id="email" [(ngModel)]="userSignup.email" type="email" name="email" placeholder="Email" required>
         </div>
     </div>
 
@@ -33,7 +33,7 @@
             <label for="password">Password</label>
         </div>
         <div class="col-75">
-            <input id="password" type="password" name="password" placeholder="Password" required>
+            <input id="password" [(ngModel)]="userSignup.password" type="password" name="password" placeholder="Password" required>
         </div>
     </div>
 
@@ -46,6 +46,6 @@
             </div>
         </div> -->
 
-        <input type="submit" name="submit" value="Log In" />
+        <input type="submit" name="submit" value="Register" />
 
 </form>

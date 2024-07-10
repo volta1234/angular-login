@@ -117,3 +117,8 @@
             color: cornflowerblue;
         }
 
+        #redirect-login {
+            text-decoration: none;
+            color: rgb(141, 141, 233);
+        }
+
