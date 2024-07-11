@@ -3,11 +3,11 @@
     <h3 id="logo">Log In</h3>
 
     <label for="email">Email</label>
-    <input type="text" id="email" name="email" placeholder="Type in your email.." autocomplete="off"
+    <input type="text" [(ngModel)]="email" id="email" name="email" placeholder="Type in your email.." autocomplete="off"
         required />
 
     <label for="password">Password</label>
-    <input type="password" id="password" name="password" placeholder="Enter your password.." autocomplete="off"
+    <input type="password" [(ngModel)]="password" id="password" name="password" placeholder="Enter your password.." autocomplete="off"
         required />
 
     <a class="forgot" href="/reset-password">Forgot Password?</a>

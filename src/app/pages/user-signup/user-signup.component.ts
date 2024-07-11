@@ -23,7 +23,6 @@ export class UserSignupComponent {
     localStorage.setItem('users', JSON.stringify(users));
 
     alert('Welcome to volta Dynamics, proceed to Login.');
-    console.log(this.userSignup)
   }
 }
 

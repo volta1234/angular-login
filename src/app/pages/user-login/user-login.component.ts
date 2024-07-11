@@ -1,30 +1,25 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-user-login',
+  selector: 'app-login',
   standalone: true,
   imports: [FormsModule],
   templateUrl: './user-login.component.html',
-  styleUrl: './user-login.component.css'
+  styleUrls: ['./user-login.component.css']
 })
 export class UserLoginComponent {
+
   email: string = '';
   password: string = '';
+  errorMessage: string = '';
 
-  constructor(private router: Router) {}
+  constructor(private authService: AuthService) { }
 
-  onSubmit() {
-    let users = JSON.parse(localStorage.getItem('users') || '[]');
-    let foundUser = users.find((user: any) => user.email === this.email && user.password === this.password);
-
-    if (foundUser) {
-      alert('Login successful!');
-      this.router.navigate(['/user-table']);
-    } else {
-      alert('Invalid email or password');
+  onSubmit(): void {
+    if (!this.authService.login(this.email, this.password)) {
+      this.errorMessage = 'Invalid email or password';
     }
   }
 }
-
