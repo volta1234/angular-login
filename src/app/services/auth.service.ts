@@ -48,6 +48,7 @@ export class AuthService {
     if (!this.localStorageAvailable) return;
 
     localStorage.removeItem(this.USER_KEY);
+    this.router.navigate([''])
   }
 
   isLoggedIn(): boolean {

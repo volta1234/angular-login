@@ -126,8 +126,18 @@
     background-color: #dfdfeb;
   }
 
-  .landing-page header .links li:not(:last-child):hover {
-    color: #6c63ff;
+  .is-active{
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #eee5e5;
+    background-color: rgba(70, 70, 150, 0.5);
+  }
+
+  .is-active:hover{
+
+    background-color: gainsboro;
+    color: black;
+
   }
 
   .landing-page .content .container {
