@@ -16,10 +16,16 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   constructor(public authService: AuthService) { }
+  loading: boolean = false
 
   logout() {
-    this.authService.logout();
+    this.loading = true;
+
+    setTimeout(() => {
+      this.authService.logout();
+      this.loading=false
+    }, 3000)
   }
 
-  title="Volta Dynamic"
+  title = "Volta Dynamic"
 }

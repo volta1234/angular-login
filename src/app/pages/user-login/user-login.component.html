@@ -1,5 +1,4 @@
 <form (ngSubmit)="onSubmit()" method="post" action="">
-
     <h3 id="logo">Log In</h3>
 
     <label for="email">Email</label>
@@ -15,4 +14,5 @@
 
     <input type="submit" name="submit" value="Log In" />
 
+    <div *ngIf="loading" class="spinner"></div>
 </form>
