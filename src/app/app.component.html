@@ -5,11 +5,18 @@
         <a *ngIf="!authService.isLoggedIn()" href="#" class="logo">volta <b>Dynamic</b></a>
         <ul class="links">
           <li *ngIf="!authService.isLoggedIn()" id="login-link" routerLink="/login">Login</li>
-          <li class="is-active" *ngIf="authService.isLoggedIn()" routerLink="/user-table">Users</li>
-          <li *ngIf="authService.isLoggedIn()" (click)="logout()" id="logout">
+          <li [class.inactive]="loading" class="is-active" *ngIf="authService.isLoggedIn()" routerLink="/user-table">Users</li>
+          <li [class.inactive]="loading" *ngIf="authService.isLoggedIn()" (click)="logout()" id="logout">
             Logout
-            <div *ngIf="loading" class="spinner"></div>
           </li>
+          <div *ngIf="loading" class="overlay">
+            <div class="dots-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="message">Logging Out</div>
+          </div>
           <li *ngIf="!authService.isLoggedIn()" routerLink="/signup">Get Started</li>
         </ul>
       </div>
